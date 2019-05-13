@@ -4,23 +4,23 @@ from ex3 import Book
 
 class TestShoppingCart(TestCase):
     def setUp(self):
-        b1 = Book("a", "b", 2)
-        b2 = Book("a2", "b2", 7)
-        c = ShoppingCart()
-        c.addBook(b1)
-        c.addBook(b2)
+        self.b1 = Book("a", "b", 2)
+        self.b2 = Book("a2", "b2", 7)
+        self.c = ShoppingCart()
+        self.c.addBook(self.b1)
+        self.c.addBook(self.b2)
 
     def test_addBook(self):
-        self.assertEquals(ShoppingCart().addBook())
+        self.assertEqual(ShoppingCart().addBook(self.b1), 1)
 
     def test_deleteCart(self):
-        self.fail()
+        self.assertEqual(ShoppingCart().deleteCart(), 1)
 
     def test_lenCart(self):
-        self.fail()
+        self.assertEqual(self.c.lenCart(), 2)
 
     def test_valueCart(self):
-        self.fail()
+        self.assertEqual(self.c.valueCart(), 9)
 
     def test_delBook(self):
-        self.fail()
+        self.assertEqual(self.c.delBook(self.b1.getISBN()), 1)

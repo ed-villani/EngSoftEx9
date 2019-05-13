@@ -53,12 +53,3 @@ class ShoppingCart:
                 livros.pop(i)
                 return 1
         return 0
-
-
-
-c = ShoppingCart()
-c.addBook(b1)
-c.addBook(b2)
-print(c.valueCart())
-print(c.delBook("b"))
-print(c.delBook("b"))
