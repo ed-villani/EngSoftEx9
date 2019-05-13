@@ -1,7 +1,7 @@
 from unittest import TestCase
 from ex3 import ShoppingCart
 from ex3 import Book
-#q
+
 class TestShoppingCart(TestCase):
     def setUp(self):
         self.b1 = Book("a", "b", 2)
